@@ -18,15 +18,16 @@ function showSection(id) {
 async function loadProjects() {
   const target = document.getElementById('project-list');
   if (!target) return;
+  projectsLoaded = true; // mark early so a quick re-entry doesn't kick off a second fetch
   try {
     const res = await fetch('./data/projects.json', { cache: 'no-cache' });
     if (!res.ok) throw new Error('HTTP ' + res.status);
     const data = await res.json();
     target.innerHTML = renderProjectsHtml(data);
-    projectsLoaded = true;
   } catch (err) {
     target.innerHTML = '<p class="error">error: failed to load projects.json (' +
       (err && err.message ? err.message : 'unknown') + ')</p>';
+    projectsLoaded = false; // allow retry on next visit
   }
 }
 
