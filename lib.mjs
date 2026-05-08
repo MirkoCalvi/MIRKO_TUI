@@ -23,6 +23,8 @@ export function escapeHtml(s) {
     .replace(/'/g, '&#39;');
 }
 
+const SAFE_URL = /^(https?:|mailto:)/i;
+
 export function renderProjectsHtml(projects) {
   if (!Array.isArray(projects) || projects.length === 0) {
     return '<p class="empty">no projects yet.</p>';
@@ -30,8 +32,9 @@ export function renderProjectsHtml(projects) {
   return projects.map(p => {
     const name = escapeHtml(p.name);
     const description = escapeHtml(p.description);
-    const url = escapeHtml(p.url);
-    const label = linkLabel(p.url);
+    const rawUrl = typeof p.url === 'string' && SAFE_URL.test(p.url) ? p.url : '#';
+    const url = escapeHtml(rawUrl);
+    const label = linkLabel(rawUrl);
     const tags = (p.tags || [])
       .map(t => `<span class="tag">${escapeHtml(t)}</span>`)
       .join(' ');

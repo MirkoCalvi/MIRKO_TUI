@@ -1,9 +1,6 @@
 import { test } from 'node:test';
 import assert from 'node:assert/strict';
-import { pickSection } from '../lib.mjs';
-import { linkLabel } from '../lib.mjs';
-import { escapeHtml } from '../lib.mjs';
-import { renderProjectsHtml } from '../lib.mjs';
+import { pickSection, linkLabel, escapeHtml, renderProjectsHtml } from '../lib.mjs';
 
 test('pickSection: empty hash defaults to home', () => {
   assert.equal(pickSection(''), 'home');
@@ -137,4 +134,81 @@ test('renderProjectsHtml: handles missing tags array', () => {
     name: 'X', description: '.', url: 'https://github.com/a/b'
   }]);
   assert.match(html, /X/);
+});
+
+test('renderProjectsHtml: blocks javascript: URL scheme (XSS guard)', () => {
+  const html = renderProjectsHtml([{
+    name: 'X',
+    description: '.',
+    url: 'javascript:alert(1)',
+    tags: []
+  }]);
+  assert.doesNotMatch(html, /href="javascript:/);
+});
+
+test('renderProjectsHtml: blocks data: URL scheme', () => {
+  const html = renderProjectsHtml([{
+    name: 'X',
+    description: '.',
+    url: 'data:text/html,<script>alert(1)</script>',
+    tags: []
+  }]);
+  assert.doesNotMatch(html, /href="data:/);
+});
+
+test('renderProjectsHtml: allows http: URLs', () => {
+  const html = renderProjectsHtml([{
+    name: 'X', description: '.', url: 'http://example.com', tags: []
+  }]);
+  assert.match(html, /href="http:\/\/example\.com"/);
+});
+
+test('renderProjectsHtml: allows https: URLs', () => {
+  const html = renderProjectsHtml([{
+    name: 'X', description: '.', url: 'https://github.com/a/b', tags: []
+  }]);
+  assert.match(html, /href="https:\/\/github\.com\/a\/b"/);
+});
+
+test('renderProjectsHtml: allows mailto: URLs', () => {
+  const html = renderProjectsHtml([{
+    name: 'X', description: '.', url: 'mailto:foo@bar.com', tags: []
+  }]);
+  assert.match(html, /href="mailto:foo@bar\.com"/);
+});
+
+test('renderProjectsHtml: missing name renders without crash', () => {
+  const html = renderProjectsHtml([{ description: '.', url: 'https://github.com/a/b', tags: [] }]);
+  assert.match(html, /class="project"/);
+});
+
+test('renderProjectsHtml: missing url falls back to # and visit label', () => {
+  const html = renderProjectsHtml([{ name: 'X', description: '.', tags: [] }]);
+  assert.match(html, /href="#"/);
+  assert.match(html, /visit ↗/);
+});
+
+test('renderProjectsHtml: missing description renders without crash', () => {
+  const html = renderProjectsHtml([{ name: 'X', url: 'https://github.com/a/b', tags: [] }]);
+  assert.match(html, /X/);
+});
+
+test('renderProjectsHtml: escapes HTML in name (XSS guard)', () => {
+  const html = renderProjectsHtml([{
+    name: '<img src=x onerror=alert(1)>',
+    description: '.',
+    url: 'https://github.com/a/b',
+    tags: []
+  }]);
+  assert.doesNotMatch(html, /<img src=x onerror=/);
+  assert.match(html, /&lt;img src=x onerror=alert\(1\)&gt;/);
+});
+
+test('renderProjectsHtml: escapes HTML in tags (XSS guard)', () => {
+  const html = renderProjectsHtml([{
+    name: 'X', description: '.', url: 'https://github.com/a/b',
+    tags: ['<script>alert(1)</script>']
+  }]);
+  assert.doesNotMatch(html, /<script>alert\(1\)/);
+  assert.match(html, /&lt;script&gt;/);
 });
