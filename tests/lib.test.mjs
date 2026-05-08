@@ -3,6 +3,7 @@ import assert from 'node:assert/strict';
 import { pickSection } from '../lib.mjs';
 import { linkLabel } from '../lib.mjs';
 import { escapeHtml } from '../lib.mjs';
+import { renderProjectsHtml } from '../lib.mjs';
 
 test('pickSection: empty hash defaults to home', () => {
   assert.equal(pickSection(''), 'home');
@@ -71,4 +72,69 @@ test('escapeHtml: undefined returns empty string', () => {
 
 test('escapeHtml: null returns empty string', () => {
   assert.equal(escapeHtml(null), '');
+});
+
+test('renderProjectsHtml: empty array produces empty-state message', () => {
+  const html = renderProjectsHtml([]);
+  assert.match(html, /no projects/i);
+});
+
+test('renderProjectsHtml: includes project name and description', () => {
+  const html = renderProjectsHtml([{
+    name: 'Z-Ant',
+    description: 'ONNX inference engine.',
+    url: 'https://github.com/ZantFoundation/Z-Ant',
+    tags: ['zig', 'onnx']
+  }]);
+  assert.match(html, /Z-Ant/);
+  assert.match(html, /ONNX inference engine\./);
+});
+
+test('renderProjectsHtml: includes tag chips', () => {
+  const html = renderProjectsHtml([{
+    name: 'Z-Ant', description: '.', url: 'https://github.com/x/y',
+    tags: ['zig', 'onnx']
+  }]);
+  assert.match(html, /class="tag"[^>]*>zig</);
+  assert.match(html, /class="tag"[^>]*>onnx</);
+});
+
+test('renderProjectsHtml: github URL gets github label', () => {
+  const html = renderProjectsHtml([{
+    name: 'X', description: '.', url: 'https://github.com/a/b', tags: []
+  }]);
+  assert.match(html, /github ↗/);
+});
+
+test('renderProjectsHtml: external URL gets visit label', () => {
+  const html = renderProjectsHtml([{
+    name: 'X', description: '.', url: 'https://mathpilot.ai', tags: []
+  }]);
+  assert.match(html, /visit ↗/);
+});
+
+test('renderProjectsHtml: link has rel=noopener and target=_blank', () => {
+  const html = renderProjectsHtml([{
+    name: 'X', description: '.', url: 'https://github.com/a/b', tags: []
+  }]);
+  assert.match(html, /target="_blank"/);
+  assert.match(html, /rel="noopener noreferrer"/);
+});
+
+test('renderProjectsHtml: escapes HTML in description (XSS guard)', () => {
+  const html = renderProjectsHtml([{
+    name: 'X',
+    description: '<script>alert(1)</script>',
+    url: 'https://github.com/a/b',
+    tags: []
+  }]);
+  assert.doesNotMatch(html, /<script>alert/);
+  assert.match(html, /&lt;script&gt;/);
+});
+
+test('renderProjectsHtml: handles missing tags array', () => {
+  const html = renderProjectsHtml([{
+    name: 'X', description: '.', url: 'https://github.com/a/b'
+  }]);
+  assert.match(html, /X/);
 });
