@@ -14,7 +14,136 @@
 <main class="terminal" role="main">
 
   <section id="home" class="screen" data-section="home">
-    <!-- Home content goes here in Task 8 -->
+    <header class="banner">
+      <h1 class="name">Mirko Calvi</h1>
+      <p class="tagline">Software Engineer · Edge AI Engineer · Robotics</p>
+    </header>
+
+    <div class="cat-block">
+      <p class="prompt"><span class="user">mirko@portfolio</span>:<span class="path">~</span>$ whoami</p>
+      <div class="output">Mirko Calvi — Software Engineer, Edge AI Engineer, Robotics</div>
+    </div>
+
+    <div class="cat-block">
+      <p class="prompt"><span class="user">mirko@portfolio</span>:<span class="path">~</span>$ cat about.txt</p>
+      <div class="output">
+        <p>CTO and Software Engineer specializing in Edge AI, Embedded Systems, and Robotics. Cofounder of Zant, a high-performance inference engine for microcontrollers. Proven track record of securing venture capital (€170k Seed Round), shipping cross-platform SaaS products, and building global developer communities. Expert in optimizing neural networks (ONNX) for constrained hardware.</p>
+      </div>
+    </div>
+
+    <div class="cat-block">
+      <p class="prompt"><span class="user">mirko@portfolio</span>:<span class="path">~</span>$ cat experience.txt</p>
+      <div class="output">
+        <article class="job">
+          <h3 class="job-title">Zant s.r.l. — CTO &amp; Cofounder</h3>
+          <p class="job-meta">Jun 2025 – Apr 2026 · Milan</p>
+          <ul>
+            <li>Raised €170k seed round; followed 3 pilot contracts; collaborated with Arduino. Operations dissolved due to strategic misalignment; open-source project remains active.</li>
+            <li>Developed Zant SDK: high-performance ONNX inference engine for ARM Cortex-M; custom memory allocator + quantization pipeline; 15% improvement on peak memory usage on CNN vs TFLM.</li>
+            <li>Architected Mathpilot.ai: cross-platform B2B SaaS for AI-driven STEM correction; 100+ users.</li>
+            <li>Smart Retail Analytics: CV system for real-time crowd analysis and age estimation; delivered insights to 2 clients.</li>
+          </ul>
+        </article>
+        <article class="job">
+          <h3 class="job-title">Zant Foundation — Founder &amp; Lead Developer</h3>
+          <p class="job-meta">Jun 2024 – present · worldwide</p>
+          <ul>
+            <li>Created Zant, a Zig-based open-source inference engine for ONNX neural networks on microcontrollers.</li>
+            <li>375+ GitHub stars, 48 forks, 30+ contributors. Adopted by 15 PoliMi master's students; 5 continued post-graduation.</li>
+            <li>Referenced in 2 academic papers on Edge AI performance (INT8 quantization, memory-latency tradeoffs).</li>
+            <li>Speaker at LinuxDay and ZigDays. Lead Coordinator of TinyHack (50+ participants).</li>
+          </ul>
+        </article>
+        <article class="job">
+          <h3 class="job-title">AIRLAB — FRE Competition Robotic Engineer</h3>
+          <p class="job-meta">Sep 2024 – Jun 2025 · Milan</p>
+          <ul>
+            <li>Led 4-person team building an autonomous agricultural robot for the FRE competition.</li>
+            <li>SLAM (gmapping) + ROS 2 Nav 2 + sensor fusion (LiDAR + depth camera) on NVIDIA Jetson Orin with CUDA, 58 fps.</li>
+            <li>Tuned DWB controller and BT recovery behaviors; achieved 94% row-following accuracy at 15 km/h.</li>
+          </ul>
+        </article>
+        <article class="job">
+          <h3 class="job-title">Bitpolimi — Associate Member &amp; Event Organizer</h3>
+          <p class="job-meta">Polytechnic University of Milan</p>
+          <ul>
+            <li>Cofounded a student organization focused on Bitcoin open-source development and education.</li>
+            <li>Organized technical events and a university course on Bitcoin technology with international speakers.</li>
+          </ul>
+        </article>
+      </div>
+    </div>
+
+    <div class="cat-block">
+      <p class="prompt"><span class="user">mirko@portfolio</span>:<span class="path">~</span>$ cat education.txt</p>
+      <div class="output">
+        <article class="degree">
+          <h3>Polytechnic University of Milan — MSc Computer Science &amp; Engineering</h3>
+          <p class="job-meta">Mar 2024 – Dec 2025 · Milan</p>
+          <p>Specialization in Artificial Intelligence, Robotics, and Computing Architectures.</p>
+        </article>
+        <article class="degree">
+          <h3>Malmö University — Erasmus</h3>
+          <p class="job-meta">Jan 2025 – Jun 2025 · Malmö</p>
+          <p>In-depth study of Edge AI and IoT. Opened communication channels between Zant Foundation and Arduino S.r.l.</p>
+        </article>
+        <article class="degree">
+          <h3>Polytechnic University of Milan — BSc Computer Science &amp; Engineering</h3>
+          <p class="job-meta">Sep 2020 – Mar 2024 · Milan</p>
+        </article>
+      </div>
+    </div>
+
+    <div class="cat-block">
+      <p class="prompt"><span class="user">mirko@portfolio</span>:<span class="path">~</span>$ cat skills.txt</p>
+      <div class="output">
+        <dl class="skills">
+          <dt>Languages</dt>
+          <dd>C, C++, Zig, Python, Dart, Java, VHDL, Swift</dd>
+          <dt>Embedded &amp; Edge AI</dt>
+          <dd>ARM Cortex-M, STM32, FreeRTOS, JTAG/SWD, TFLM, model quantization (post-training), inference on constrained hardware</dd>
+          <dt>Machine Learning &amp; AI</dt>
+          <dd>PyTorch, TensorFlow, ONNX, prompt engineering, LangChain, LLM tooling (Claude CLI)</dd>
+          <dt>Robotics &amp; CV</dt>
+          <dd>ROS, ROS 2, OpenCV, SLAM (gmapping), Nav2, LiDAR (Velodyne, RPLiDAR), depth cameras, sensor fusion, Gazebo</dd>
+          <dt>Infrastructure</dt>
+          <dd>Docker, CI/CD, PostgreSQL, GCP, Git, pytest</dd>
+          <dt>OS</dt>
+          <dd>Linux (Ubuntu), FreeRTOS, Windows</dd>
+        </dl>
+      </div>
+    </div>
+
+    <div class="cat-block">
+      <p class="prompt"><span class="user">mirko@portfolio</span>:<span class="path">~</span>$ cat publications.txt</p>
+      <div class="output">
+        <p>Calvi, M. — <em>Zant: lightweight neural network inference engine for microcontrollers</em>. Master's Thesis, Politecnico di Milano. <a href="https://www.politesi.polimi.it/handle/10589/247070" target="_blank" rel="noopener noreferrer">politesi.polimi.it ↗</a></p>
+      </div>
+    </div>
+
+    <div class="cat-block">
+      <p class="prompt"><span class="user">mirko@portfolio</span>:<span class="path">~</span>$ cat contact.txt</p>
+      <div class="output">
+        <ul class="contact">
+          <li>email: <a href="mailto:mirkocalvi.job@gmail.com">mirkocalvi.job@gmail.com</a></li>
+          <li>location: Milan (IT)</li>
+          <li>github: <a href="https://github.com/MirkoCalvi" target="_blank" rel="noopener noreferrer">github.com/MirkoCalvi ↗</a></li>
+          <li>linkedin: <a href="https://www.linkedin.com/in/mirko-calvi/" target="_blank" rel="noopener noreferrer">linkedin.com/in/mirko-calvi ↗</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="cat-block nav-block">
+      <p class="prompt"><span class="user">mirko@portfolio</span>:<span class="path">~</span>$ ls</p>
+      <div class="output nav">
+        <a href="#projects" class="nav-link">[ projects ]</a>
+        <a href="#about" class="nav-link">[ about-me ]</a>
+        <a href="https://github.com/MirkoCalvi" target="_blank" rel="noopener noreferrer" class="nav-link">[ github ↗ ]</a>
+        <a href="mailto:mirkocalvi.job@gmail.com" class="nav-link">[ email ↗ ]</a>
+      </div>
+    </div>
+
+    <p class="prompt prompt-tail"><span class="user">mirko@portfolio</span>:<span class="path">~</span>$ <span class="cursor">▍</span></p>
   </section>
 
   <section id="projects" class="screen" data-section="projects" hidden>
