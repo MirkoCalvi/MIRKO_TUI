@@ -46,6 +46,29 @@ main.terminal {
   color: var(--muted);
 }
 
+.ascii-name {
+  font-family: 'JetBrains Mono', Menlo, Consolas, monospace;
+  font-size: clamp(10px, 3.5vw, 22px);
+  line-height: 1.1;
+  margin: 0 0 12px;
+  padding: 0 0 4px;
+  color: var(--prompt);
+  white-space: pre;
+  font-weight: 600;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
 .cat-block {
   margin: 24px 0;
 }
