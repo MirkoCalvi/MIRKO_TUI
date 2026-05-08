@@ -63,30 +63,42 @@ Total expected source: ~400 lines across all files. Easy to scan, easy to edit b
     "name": "Z-Ant",
     "description": "Zig-based ONNX inference engine for microcontrollers. 375+ stars, used by 15 PoliMi master's students, cited in 2 academic papers.",
     "url": "https://github.com/ZantFoundation/Z-Ant",
-    "tags": ["zig", "onnx", "edge-ai", "embedded"]
+    "tags": [
+      "zig", "c", "onnx", "edge-ai", "embedded",
+      "arm-cortex-m", "stm32", "freertos",
+      "tflm", "quantization", "neural-networks",
+      "open-source", "ci-cd"
+    ]
   },
   {
     "name": "Mathpilot",
     "description": "Cross-platform B2B SaaS for AI-driven correction of university-level STEM exercises. 100+ users.",
     "url": "https://mathpilot.ai",
-    "tags": ["saas", "ai", "edutech", "fastapi"]
+    "tags": [
+      "saas", "edutech", "full-stack",
+      "python", "fastapi", "dart", "swift", "ios",
+      "postgresql", "gcp", "docker", "ci-cd",
+      "llm", "langchain", "prompt-engineering"
+    ]
   },
   {
     "name": "CrowDJ",
     "description": "<one-line description — confirm with Mirko>",
     "url": "<github URL — confirm with Mirko>",
-    "tags": []
+    "tags": ["<confirm with Mirko — pick from CV skills>"]
   },
   {
     "name": "My Shelfie",
-    "description": "<one-line description — confirm with Mirko>",
+    "description": "<one-line description — confirm with Mirko (PoliMi software engineering board game project)>",
     "url": "<github URL — confirm with Mirko>",
-    "tags": []
+    "tags": ["java", "<confirm rest with Mirko>"]
   }
 ]
 ```
 
 Schema: each project is `{ name, description, url, tags[] }`. Order in the file = order on the page. `tags[]` is rendered as `[zig, onnx, edge-ai]` chips.
+
+**Tag-sourcing convention:** tags should come from (or map onto) the technical-skills section of Mirko's CV — programming languages, embedded/edge-AI tooling, ML frameworks, robotics stack, infrastructure. Keeping tags drawn from that vocabulary makes the Projects page feel like an indexed view of the skills listed on Home, rather than a separate taxonomy. A visitor scanning skills can then mentally connect each skill to the projects that exercise it.
 
 URLs may point to GitHub repos in any namespace (Mirko's account, Zant org, third-party orgs) or external sites (e.g. mathpilot.ai). The `url` field is opaque — no GitHub-specific parsing.
 
@@ -205,7 +217,7 @@ No `npm install`. No build. No webpack config to fight.
 
 ## Open questions for Mirko
 
-1. **CrowDJ and My Shelfie URLs/descriptions** — the CV mentions both but doesn't include their repository URLs or descriptions. Need a one-liner and a link for each before `projects.json` is finalized.
+1. **CrowDJ and My Shelfie URLs / descriptions / tags** — the CV mentions both but doesn't include their repository URLs, descriptions, or tech stacks. Need a one-liner, a link, and a tag list (drawn from CV skills) for each before `projects.json` is finalized. My Shelfie is presumed Java (PoliMi software engineering project) but Mirko should confirm.
 2. **About Me content** — the spec scaffolds an empty `<section id="about">`. Mirko provides the bio paragraph and any hobbies/interests when ready (can be a follow-up after v1 ships).
 3. **Custom domain?** — defaults to `mirkocalvi.github.io/MIRKO_TUI/`. If Mirko has or wants a custom domain (e.g. `mirko.dev`), a `CNAME` file in repo root + DNS config does it. Not blocking v1.
 
