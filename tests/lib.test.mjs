@@ -2,6 +2,7 @@ import { test } from 'node:test';
 import assert from 'node:assert/strict';
 import { pickSection } from '../lib.mjs';
 import { linkLabel } from '../lib.mjs';
+import { escapeHtml } from '../lib.mjs';
 
 test('pickSection: empty hash defaults to home', () => {
   assert.equal(pickSection(''), 'home');
@@ -45,4 +46,29 @@ test('linkLabel: external site → visit label', () => {
 
 test('linkLabel: empty string → visit label (defensive)', () => {
   assert.equal(linkLabel(''), 'visit ↗');
+});
+
+test('escapeHtml: ampersand', () => {
+  assert.equal(escapeHtml('A & B'), 'A &amp; B');
+});
+
+test('escapeHtml: angle brackets', () => {
+  assert.equal(escapeHtml('<script>alert(1)</script>'),
+    '&lt;script&gt;alert(1)&lt;/script&gt;');
+});
+
+test('escapeHtml: quotes', () => {
+  assert.equal(escapeHtml('she said "hi"'), 'she said &quot;hi&quot;');
+});
+
+test('escapeHtml: single quote', () => {
+  assert.equal(escapeHtml("it's"), 'it&#39;s');
+});
+
+test('escapeHtml: undefined returns empty string', () => {
+  assert.equal(escapeHtml(undefined), '');
+});
+
+test('escapeHtml: null returns empty string', () => {
+  assert.equal(escapeHtml(null), '');
 });
