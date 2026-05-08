@@ -1,0 +1,26 @@
+[
+  {
+    "name": "Z-Ant",
+    "description": "Zig-based ONNX inference engine for microcontrollers. 375+ stars, used by 15 PoliMi master's students, cited in 2 academic papers.",
+    "url": "https://github.com/ZantFoundation/Z-Ant",
+    "tags": ["zig", "c", "onnx", "edge-ai", "embedded", "arm-cortex-m", "stm32", "freertos", "tflm", "quantization", "neural-networks", "open-source", "ci-cd"]
+  },
+  {
+    "name": "Mathpilot",
+    "description": "Cross-platform B2B SaaS for AI-driven correction of university-level STEM exercises. 100+ users.",
+    "url": "https://mathpilot.ai",
+    "tags": ["saas", "edutech", "full-stack", "python", "fastapi", "dart", "swift", "ios", "postgresql", "gcp", "docker", "ci-cd", "llm", "langchain", "prompt-engineering"]
+  },
+  {
+    "name": "CrowDJ",
+    "description": "TODO: one-line description (placeholder)",
+    "url": "https://github.com/MirkoCalvi",
+    "tags": ["TODO"]
+  },
+  {
+    "name": "My Shelfie",
+    "description": "TODO: one-line description — PoliMi software-engineering board game project (placeholder)",
+    "url": "https://github.com/MirkoCalvi",
+    "tags": ["java", "TODO"]
+  }
+]
