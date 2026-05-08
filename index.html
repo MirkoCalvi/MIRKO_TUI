@@ -147,7 +147,25 @@
   </section>
 
   <section id="projects" class="screen" data-section="projects" hidden>
-    <!-- Projects scaffolding goes here in Task 10 -->
+    <header class="banner">
+      <h1 class="name">projects/</h1>
+    </header>
+
+    <div class="cat-block">
+      <p class="prompt"><span class="user">mirko@portfolio</span>:<span class="path">~/projects</span>$ ls</p>
+      <div id="project-list" class="output project-list" aria-live="polite">
+        <p class="loading">loading projects…</p>
+      </div>
+    </div>
+
+    <div class="cat-block nav-block">
+      <p class="prompt"><span class="user">mirko@portfolio</span>:<span class="path">~/projects</span>$ cd ..</p>
+      <div class="output nav">
+        <a href="#home" class="nav-link">[ ← back ]</a>
+      </div>
+    </div>
+
+    <p class="prompt prompt-tail"><span class="user">mirko@portfolio</span>:<span class="path">~/projects</span>$ <span class="cursor">▍</span></p>
   </section>
 
   <section id="about" class="screen" data-section="about" hidden>
