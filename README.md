@@ -1,6 +1,6 @@
 # MIRKO_TUI
 
-Personal portfolio for Mirko Calvi, styled as a developer's terminal. Static, single-page, no build step.
+My portfolio, styled as a developer's terminal. Static, single-page, no build step.
 
 Live: <https://mirkocalvi.github.io/MIRKO_TUI/>
 
@@ -37,3 +37,5 @@ data/projects.json  curated project list
 tests/lib.test.mjs  unit tests for lib.mjs
 docs/superpowers/   design spec and implementation plan
 ```
+
+*Open Source Everything - Mirko Calvi*
