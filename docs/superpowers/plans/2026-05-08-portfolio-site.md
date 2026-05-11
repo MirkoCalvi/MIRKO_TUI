@@ -570,19 +570,19 @@ In `index.html`, replace the line `<!-- Home content goes here in Task 8 -->` wi
     </header>
 
     <div class="cat-block">
-      <p class="prompt"><span class="user">mirko@portfolio</span>:<span class="path">~</span>$ whoami</p>
+      <p class="prompt"><span class="user">mirko@cv</span>:<span class="path">~</span>$ whoami</p>
       <div class="output">Mirko Calvi — Software Engineer, Edge AI Engineer, Robotics</div>
     </div>
 
     <div class="cat-block">
-      <p class="prompt"><span class="user">mirko@portfolio</span>:<span class="path">~</span>$ cat about.txt</p>
+      <p class="prompt"><span class="user">mirko@cv</span>:<span class="path">~</span>$ cat about.txt</p>
       <div class="output">
         <p>CTO and Software Engineer specializing in Edge AI, Embedded Systems, and Robotics. Cofounder of Zant, a high-performance inference engine for microcontrollers. Proven track record of securing venture capital (€170k Seed Round), shipping cross-platform SaaS products, and building global developer communities. Expert in optimizing neural networks (ONNX) for constrained hardware.</p>
       </div>
     </div>
 
     <div class="cat-block">
-      <p class="prompt"><span class="user">mirko@portfolio</span>:<span class="path">~</span>$ cat experience.txt</p>
+      <p class="prompt"><span class="user">mirko@cv</span>:<span class="path">~</span>$ cat experience.txt</p>
       <div class="output">
         <article class="job">
           <h3 class="job-title">Zant s.r.l. — CTO &amp; Cofounder</h3>
@@ -625,7 +625,7 @@ In `index.html`, replace the line `<!-- Home content goes here in Task 8 -->` wi
     </div>
 
     <div class="cat-block">
-      <p class="prompt"><span class="user">mirko@portfolio</span>:<span class="path">~</span>$ cat education.txt</p>
+      <p class="prompt"><span class="user">mirko@cv</span>:<span class="path">~</span>$ cat education.txt</p>
       <div class="output">
         <article class="degree">
           <h3>Polytechnic University of Milan — MSc Computer Science &amp; Engineering</h3>
@@ -645,7 +645,7 @@ In `index.html`, replace the line `<!-- Home content goes here in Task 8 -->` wi
     </div>
 
     <div class="cat-block">
-      <p class="prompt"><span class="user">mirko@portfolio</span>:<span class="path">~</span>$ cat skills.txt</p>
+      <p class="prompt"><span class="user">mirko@cv</span>:<span class="path">~</span>$ cat skills.txt</p>
       <div class="output">
         <dl class="skills">
           <dt>Languages</dt>
@@ -665,14 +665,14 @@ In `index.html`, replace the line `<!-- Home content goes here in Task 8 -->` wi
     </div>
 
     <div class="cat-block">
-      <p class="prompt"><span class="user">mirko@portfolio</span>:<span class="path">~</span>$ cat publications.txt</p>
+      <p class="prompt"><span class="user">mirko@cv</span>:<span class="path">~</span>$ cat publications.txt</p>
       <div class="output">
         <p>Calvi, M. — <em>Zant: lightweight neural network inference engine for microcontrollers</em>. Master's Thesis, Politecnico di Milano. <a href="https://www.politesi.polimi.it/handle/10589/247070" target="_blank" rel="noopener noreferrer">politesi.polimi.it ↗</a></p>
       </div>
     </div>
 
     <div class="cat-block">
-      <p class="prompt"><span class="user">mirko@portfolio</span>:<span class="path">~</span>$ cat contact.txt</p>
+      <p class="prompt"><span class="user">mirko@cv</span>:<span class="path">~</span>$ cat contact.txt</p>
       <div class="output">
         <ul class="contact">
           <li>email: <a href="mailto:mirkocalvi.job@gmail.com">mirkocalvi.job@gmail.com</a></li>
@@ -684,7 +684,7 @@ In `index.html`, replace the line `<!-- Home content goes here in Task 8 -->` wi
     </div>
 
     <div class="cat-block nav-block">
-      <p class="prompt"><span class="user">mirko@portfolio</span>:<span class="path">~</span>$ ls</p>
+      <p class="prompt"><span class="user">mirko@cv</span>:<span class="path">~</span>$ ls</p>
       <div class="output nav">
         <a href="#projects" class="nav-link">[ projects ]</a>
         <a href="#about" class="nav-link">[ about-me ]</a>
@@ -693,7 +693,7 @@ In `index.html`, replace the line `<!-- Home content goes here in Task 8 -->` wi
       </div>
     </div>
 
-    <p class="prompt prompt-tail"><span class="user">mirko@portfolio</span>:<span class="path">~</span>$ <span class="cursor">▍</span></p>
+    <p class="prompt prompt-tail"><span class="user">mirko@cv</span>:<span class="path">~</span>$ <span class="cursor">▍</span></p>
 ```
 
 - [ ] **Step 2: Verify the file still parses (sanity check)**
@@ -730,7 +730,7 @@ In `index.html`, replace the line `<!-- About content goes here in Task 9 -->` w
     </header>
 
     <div class="cat-block">
-      <p class="prompt"><span class="user">mirko@portfolio</span>:<span class="path">~</span>$ cat about-me.md</p>
+      <p class="prompt"><span class="user">mirko@cv</span>:<span class="path">~</span>$ cat about-me.md</p>
       <div class="output">
         <p><em>Bio placeholder — fill me in.</em></p>
         <p>This page is for the human side: who I am beyond the CV. Interests, hobbies, what I care about, things I'm learning, why I do what I do.</p>
@@ -738,20 +738,20 @@ In `index.html`, replace the line `<!-- About content goes here in Task 9 -->` w
     </div>
 
     <div class="cat-block">
-      <p class="prompt"><span class="user">mirko@portfolio</span>:<span class="path">~</span>$ cat interests.txt</p>
+      <p class="prompt"><span class="user">mirko@cv</span>:<span class="path">~</span>$ cat interests.txt</p>
       <div class="output">
         <p><em>Interests placeholder — fill me in.</em></p>
       </div>
     </div>
 
     <div class="cat-block nav-block">
-      <p class="prompt"><span class="user">mirko@portfolio</span>:<span class="path">~</span>$ cd ..</p>
+      <p class="prompt"><span class="user">mirko@cv</span>:<span class="path">~</span>$ cd ..</p>
       <div class="output nav">
         <a href="#home" class="nav-link">[ ← back ]</a>
       </div>
     </div>
 
-    <p class="prompt prompt-tail"><span class="user">mirko@portfolio</span>:<span class="path">~/about</span>$ <span class="cursor">▍</span></p>
+    <p class="prompt prompt-tail"><span class="user">mirko@cv</span>:<span class="path">~/about</span>$ <span class="cursor">▍</span></p>
 ```
 
 - [ ] **Step 2: Commit**
@@ -780,20 +780,20 @@ In `index.html`, replace the line `<!-- Projects scaffolding goes here in Task 1
     </header>
 
     <div class="cat-block">
-      <p class="prompt"><span class="user">mirko@portfolio</span>:<span class="path">~/projects</span>$ ls</p>
+      <p class="prompt"><span class="user">mirko@cv</span>:<span class="path">~/projects</span>$ ls</p>
       <div id="project-list" class="output project-list" aria-live="polite">
         <p class="loading">loading projects…</p>
       </div>
     </div>
 
     <div class="cat-block nav-block">
-      <p class="prompt"><span class="user">mirko@portfolio</span>:<span class="path">~/projects</span>$ cd ..</p>
+      <p class="prompt"><span class="user">mirko@cv</span>:<span class="path">~/projects</span>$ cd ..</p>
       <div class="output nav">
         <a href="#home" class="nav-link">[ ← back ]</a>
       </div>
     </div>
 
-    <p class="prompt prompt-tail"><span class="user">mirko@portfolio</span>:<span class="path">~/projects</span>$ <span class="cursor">▍</span></p>
+    <p class="prompt prompt-tail"><span class="user">mirko@cv</span>:<span class="path">~/projects</span>$ <span class="cursor">▍</span></p>
 ```
 
 - [ ] **Step 2: Commit**

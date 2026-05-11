@@ -106,7 +106,7 @@ URLs may point to GitHub repos in any namespace (Mirko's account, Zant org, thir
 
 ## Section content
 
-All three sections share the visual frame: a fake terminal session with `mirko@portfolio:~$` prompts, monospace, GitHub Dark colors.
+All three sections share the visual frame: a fake terminal session with `mirko@cv:~$` prompts, monospace, GitHub Dark colors.
 
 ### `#home` (default visible)
 
@@ -130,7 +130,7 @@ A blinking cursor (CSS `@keyframes blink`) sits at the end of the final prompt l
 ### `#projects`
 
 ```
-mirko@portfolio:~$ ls projects/
+mirko@cv:~$ ls projects/
 
 > Z-Ant
   Zig-based ONNX inference engine for microcontrollers...
@@ -150,7 +150,7 @@ Rendered by `main.js` from `data/projects.json` on first visit to the section. E
 ### `#about`
 
 ```
-mirko@portfolio:~$ cat about-me.md
+mirko@cv:~$ cat about-me.md
 
 <longer bio paragraph — to be written by Mirko>
 

@@ -3,24 +3,36 @@
     "name": "Z-Ant",
     "description": "Zig-based ONNX inference engine for microcontrollers. 375+ stars, used by 15 PoliMi master's students, cited in 2 academic papers.",
     "url": "https://github.com/ZantFoundation/Z-Ant",
-    "tags": ["zig", "c", "onnx", "edge-ai", "embedded", "arm-cortex-m", "stm32", "freertos", "tflm", "quantization", "neural-networks", "open-source", "ci-cd"]
+    "tags": ["zig", "c", "onnx", "edge-ai", "embedded", "arm-cortex-m", "stm32", "freertos", "tflm", "quantization", "neural-networks", "open-source", "ci-cd", "Neural Networks"]
   },
   {
     "name": "Mathpilot",
     "description": "Cross-platform B2B SaaS for AI-driven correction of university-level STEM exercises. 100+ users.",
     "url": "https://mathpilot.ai",
-    "tags": ["saas", "edutech", "full-stack", "python", "fastapi", "dart", "swift", "ios", "postgresql", "gcp", "docker", "ci-cd", "llm", "langchain", "prompt-engineering"]
+    "tags": ["saas", "edutech", "full-stack", "python", "fastapi", "dart", "swift", "ios", "postgresql", "gcp", "docker", "ci-cd", "llm", "langchain", "prompt-engineering", "UI/UX"]
+  },
+  {
+    "name": "(WIP) FRIGID LLM",
+    "description": "A small chat-with-a-character app: a Go HTTP backend that fronts a local Ollama(https://ollama.com) instance with an asynchronous job queue, and a React + Vite + TypeScript frontend that signs users in with Google via Firebase and talks to that backend.",
+    "url": "https://github.com/MirkoCalvi/MIRKO_TUI",
+    "tags": ["Go", "React", "Vite", "TypeScript", "Ollama", "prompt-engineering", "topK, topP, Temperature", "Rest API", "Firebase", "UI/UX"]
+  },
+  {
+    "name": "MIRKO_TUI",
+    "description": "Personal website with a Terminal Using Interface style (yes, this website)",
+    "url": "https://github.com/MirkoCalvi/MIRKO_TUI",
+    "tags": ["HTML", "CSS", "js"]
   },
   {
     "name": "CrowDJ",
-    "description": "TODO: one-line description (placeholder)",
-    "url": "https://github.com/MirkoCalvi",
-    "tags": ["TODO"]
+    "description": "Flutter project for implementing a multi-platform application for DJ to manage events and enhance their interaction with the crowd.",
+    "url": "https://github.com/MirkoCalvi/crowDJ/tree/main/crowdj_app",
+    "tags": ["Dart", "Firebase auth", "firebase storage", "OpenStreetMap API", "Async", "offline routines","UI/UX", "Design Document"]
   },
   {
     "name": "My Shelfie",
-    "description": "TODO: one-line description — PoliMi software-engineering board game project (placeholder)",
-    "url": "https://github.com/MirkoCalvi",
-    "tags": ["java", "TODO"]
+    "description": "Digital version of the multiplayer board game MyShelfie",
+    "url": "https://github.com/MirkoCalvi/MyShelfie_advanced_softEng_project",
+    "tags": ["java", "RMI", "socket", "CLI", "GUI", "OOP"]
   }
 ]
