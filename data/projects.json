@@ -12,7 +12,7 @@
     "tags": ["saas", "edutech", "full-stack", "python", "fastapi", "dart", "swift", "ios", "postgresql", "gcp", "docker", "ci-cd", "llm", "langchain", "prompt-engineering", "UI/UX"]
   },
   {
-    "name": "(WIP) FRIGID LLM",
+    "name": "FRIGID LLM",
     "description": "A small chat-with-a-character app: a Go HTTP backend that fronts a local Ollama(https://ollama.com) instance with an asynchronous job queue, and a React + Vite + TypeScript frontend that signs users in with Google via Firebase and talks to that backend.",
     "url": "https://github.com/MirkoCalvi/MIRKO_TUI",
     "tags": ["Go", "React", "Vite", "TypeScript", "Ollama", "prompt-engineering", "topK, topP, Temperature", "Rest API", "Firebase", "UI/UX"]
