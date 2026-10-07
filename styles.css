@@ -32,9 +32,9 @@ main.terminal {
 .screen[hidden] { display: none; }
 
 .banner {
-  margin-bottom: 32px;
-  border-bottom: 1px solid var(--tag-border);
-  padding-bottom: 16px;
+  margin-bottom: 4px;
+  /* border-bottom: 1px solid var(--tag-border); */
+  padding-bottom: 4px;
 }
 .banner .name {
   font-size: 28px;
